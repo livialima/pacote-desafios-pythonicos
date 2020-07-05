@@ -9,8 +9,14 @@ PS: Python não possui o operador ++, porém += funciona.
 """
 
 def match_ends(words):
-    # +++ SUA SOLUÇÃO +++
-    return
+    new_count=0
+    mword=[]
+    for i,v in enumerate(words):
+        if len(v) > 1:
+            if v[0] == v[-1]:
+                mword.insert(new_count,v)
+                new_count += 1
+    return len(mword)
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

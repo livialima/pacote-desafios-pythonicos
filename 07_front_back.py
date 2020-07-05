@@ -10,9 +10,33 @@ Exemplo: 'abcde', a metade da frente é 'abc' e a de trás é 'de'.
 Finalmente, dadas duas strings a e b, retorne uma string na forma:
 a-frente + b-frente + a-trás + b-trás
 """
+def is_odd(num):
+    return num%2
+
 def front_back(a, b):
-    # +++ SUA SOLUÇÃO +++
-    return
+    #treat a
+    a_len = len(a)
+
+    if is_odd(a_len):
+        a_len = int(a_len/2) + 1
+    else:
+        a_len = int(a_len/2)
+
+    a_frente = a[:a_len:]
+    a_tras = a[a_len::]
+
+    #treat b
+    b_len = len(b)
+
+    if is_odd(b_len):
+        b_len = int(b_len/2) + 1
+    else:
+        b_len = int(b_len/2)
+
+    b_frente = b[:b_len:]
+    b_tras = b[b_len::]
+
+    return a_frente + b_frente + a_tras + b_tras
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
