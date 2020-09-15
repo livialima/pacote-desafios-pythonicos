@@ -8,17 +8,22 @@ ao invés do contador.
 Exemplo: donuts(5) retorna 'Number of donuts: 5'
 e donuts(23) retorna 'Number of donuts: many'
 """
-
+# First Commit
+"""
 def donuts(count):
     if count >= 10:
         number = 'many'
     else:
         number = str(count)
     return 'Number of donuts: '+ number
+"""
+
+# Smartass One-liner
+def donuts(count):
+    return 'Number of donuts: ' + ('many' if count >= 10 else str(count))
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
-
 def test(f, in_, expected):
     """
     Executa a função f com o parâmetro in_ e compara o resultado com expected.

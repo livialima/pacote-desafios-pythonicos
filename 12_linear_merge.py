@@ -8,7 +8,7 @@ modificar as listas recebidas.
 A sua solução deve rodar em tempo linear, ou seja, deve fazer uma
 única passagem em cada uma das listas.
 """
-
+# First Commit
 def linear_merge(list1, list2):
     return sorted(list1 + list2)
 

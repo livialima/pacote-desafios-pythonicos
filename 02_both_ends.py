@@ -6,13 +6,13 @@ e os dois ultimos caracteres da string original.
 Exemplo: 'spring' retorna 'spng'. Entretanto, se o tamanho da string
 for menor que 2, retorne uma string vazia.
 """
-
+# First Commit, looks like shit :/
 def both_ends(s):
     #if len(s) > 2:
     #    new_string = ""
     #else:
     #    new_string = s[:2] + s[-2::]
-    return s[:2] + s[-2::]
+    return s[:2] + s[-2::] #struggling with this >:(
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

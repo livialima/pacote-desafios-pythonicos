@@ -11,7 +11,7 @@ Exemplo:
 
 Assuma que a e b tem tamanho 2 ou maior.
 """
-
+# First Commit
 def mix_up(a, b):
     return a[0:].replace(a[0:2:], b[0:2:]) + ' ' + b[0:].replace(b[0:2:], a[0:2:])
 

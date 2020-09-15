@@ -12,7 +12,7 @@ Assuma que a string tem tamanho 1 ou maior.
 Dica: s.replace(stra, strb) retorna uma versão da string s
 onde todas as instancias de stra foram substituidas por strb.
 """
-
+# First Commit
 def fix_start(s):
     return s[0] + s[1:].replace(s[0], '*')
 

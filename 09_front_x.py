@@ -10,7 +10,7 @@ Irá retornar: ['xanadu', 'xyz', 'aardvark', 'apple', 'banana' ,'mix']
 Dica: Isso pode ser resolvido criando 2 listas e ordenando cada uma
 antes de combina-las.
 """
-
+# First Commit
 def front_x(words):
     list_x = []
     list_others = []

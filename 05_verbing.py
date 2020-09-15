@@ -9,7 +9,7 @@ Se o tamanho da string for menor que 3, não altere nada.
 
 Retorne o resultado da string.
 """
-
+# First Commit
 def verbing(s):
     if len(s) > 2:
         if s[-3::] == 'ing':

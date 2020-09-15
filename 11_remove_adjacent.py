@@ -7,7 +7,7 @@ adjacentes iguais são reduzidos a um único elemento.
 Exemplo: [1, 2, 2, 3]
 Irá retornar: [1, 2, 3]
 """
-
+# First Commit
 def remove_adjacent(nums):
     n = len(nums)
     if n == 0:
