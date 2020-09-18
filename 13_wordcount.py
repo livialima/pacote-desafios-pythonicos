@@ -56,7 +56,13 @@ import sys
 
 # +++ SUA SOLUÇÃO +++
 # Defina as funções print_words(filename) e print_top(filename).
+def print_words(filename):
+    with open(filename, "r") as reader:
+        print(reader.read())
+    return filename
 
+def print_top(filename):
+    return print_words(filename) #sort
 
 # A função abaixo chama print_words() ou print_top() de acordo com os
 # parêtros do programa.
