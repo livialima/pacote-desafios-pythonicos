@@ -53,16 +53,33 @@ e conferindo cada etapa do seu progresso.
 
 import sys
 
+# FIRST COMMIT
+def read_file(filename):
+    with open(filename, "r") as file:
+        words = file.read().lower().split()
+        words.sort()
+    return words
 
-# +++ SUA SOLUÇÃO +++
+def count_words(list_words,order):
+    counter = [list_words.count(word) for word in list_words]
+    dict_words = dict(zip(list_words, counter))
+    if order==1:
+        return sorted(dict_words.items(), key=lambda x: x[1], reverse=True)
+    else:
+        return dict_words
+
 # Defina as funções print_words(filename) e print_top(filename).
 def print_words(filename):
-    with open(filename, "r") as reader:
-        print(reader.read())
-    return filename
+    d = count_words(read_file(filename),0)
+    for i in d.items():
+        print (i[0], i[1])
+    return None
 
 def print_top(filename):
-    return print_words(filename) #sort
+    d = dict(count_words(read_file(filename),1))
+    for i in d.items():
+        print (i[0], i[1])
+    return None
 
 # A função abaixo chama print_words() ou print_top() de acordo com os
 # parêtros do programa.
