@@ -53,30 +53,35 @@ e conferindo cada etapa do seu progresso.
 
 import sys
 
-# FIRST COMMIT
+# REFACTORED
 def read_file(filename):
-    with open(filename, "r") as file:
-        words = file.read().lower().split()
-        words.sort()
+    with open(filename) as f:
+        words = f.read().lower().split()
+    words.sort()
+    print(type(words))
     return words
 
 def count_words(list_words,order):
-    counter = [list_words.count(word) for word in list_words]
+    counter = [list_words.count(w) for w in list_words]
     dict_words = dict(zip(list_words, counter))
     if order==1:
-        return sorted(dict_words.items(), key=lambda x: x[1], reverse=True)
+        print(type(dict(sorted(dict_words.items(), key=lambda t: t[1], reverse=True))))
+        return dict(sorted(dict_words.items(), key=lambda t: t[1], reverse=True))
     else:
+        print(type(dict_words))
         return dict_words
 
 # Defina as funções print_words(filename) e print_top(filename).
 def print_words(filename):
     d = count_words(read_file(filename),0)
+    print(type(d))
     for i in d.items():
         print (i[0], i[1])
     return None
 
 def print_top(filename):
-    d = dict(count_words(read_file(filename),1))
+    d = count_words(read_file(filename),1)
+    print(type(d))
     for i in d.items():
         print (i[0], i[1])
     return None
